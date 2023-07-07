@@ -240,10 +240,9 @@
             this.BtnPackageConvert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPackageConvert.Location = new System.Drawing.Point(172, 510);
             this.BtnPackageConvert.Name = "BtnPackageConvert";
-            this.BtnPackageConvert.Size = new System.Drawing.Size(117, 30);
+            this.BtnPackageConvert.Size = new System.Drawing.Size(130, 30);
             this.BtnPackageConvert.TabIndex = 11;
             this.BtnPackageConvert.Text = "Start ";
-            this.BtnPackageConvert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnPackageConvert.UseVisualStyleBackColor = true;
             this.BtnPackageConvert.Click += new System.EventHandler(this.BtnPackageConvert_Click);
             // 
@@ -261,7 +260,7 @@
             this.buttonStop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStop.Location = new System.Drawing.Point(308, 510);
             this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(117, 30);
+            this.buttonStop.Size = new System.Drawing.Size(130, 30);
             this.buttonStop.TabIndex = 13;
             this.buttonStop.Text = "Stop";
             this.buttonStop.UseVisualStyleBackColor = true;
