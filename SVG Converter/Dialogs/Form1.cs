@@ -306,9 +306,9 @@ namespace SVG_Converter
 
                                     int imageWidth = Convert.ToInt32(doc.Width.Value);
                                     int imageHeight = Convert.ToInt32(doc.Height.Value);
-                                    float ratio = (float)Width / (float)imageWidth;
+                                    float ratio = (float)arg.withSize / (float)imageWidth;
 
-                                    int WidthImage = Convert.ToInt32(Width);
+                                    int WidthImage = Convert.ToInt32(arg.withSize);
                                     int HeightImage = Convert.ToInt32(imageHeight * ratio);
                                     doc.Width = WidthImage;
                                     doc.Height = HeightImage;

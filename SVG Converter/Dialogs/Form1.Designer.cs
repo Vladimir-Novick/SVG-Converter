@@ -130,11 +130,12 @@
             // 
             this.button3.Image = global::SVG_Converter.Properties.Resources.Gnome_Emblem_Unreadable_32;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(166, 297);
+            this.button3.Location = new System.Drawing.Point(125, 297);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 29);
+            this.button3.Size = new System.Drawing.Size(73, 29);
             this.button3.TabIndex = 3;
             this.button3.Text = "Clear";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -142,11 +143,12 @@
             // 
             this.button2.Image = global::SVG_Converter.Properties.Resources.Gnome_View_Sort_Descending_32;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(452, 296);
+            this.button2.Location = new System.Drawing.Point(208, 296);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 29);
+            this.button2.Size = new System.Drawing.Size(88, 29);
             this.button2.TabIndex = 1;
             this.button2.Text = "Convert";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -154,11 +156,12 @@
             // 
             this.button1.Image = global::SVG_Converter.Properties.Resources.Gnome_List_Add_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(21, 297);
+            this.button1.Location = new System.Drawing.Point(21, 298);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 29);
+            this.button1.Size = new System.Drawing.Size(88, 29);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add Files";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -174,7 +177,7 @@
             "Jpeg",
             "Png",
             "Tiff"});
-            this.comboBox1.Location = new System.Drawing.Point(309, 298);
+            this.comboBox1.Location = new System.Drawing.Point(314, 297);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(131, 26);
             this.comboBox1.TabIndex = 4;
@@ -269,7 +272,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(436, 174);
+            this.label3.Location = new System.Drawing.Point(451, 307);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 14;
@@ -277,7 +280,7 @@
             // 
             // textBoxImageSize
             // 
-            this.textBoxImageSize.Location = new System.Drawing.Point(474, 170);
+            this.textBoxImageSize.Location = new System.Drawing.Point(489, 303);
             this.textBoxImageSize.Name = "textBoxImageSize";
             this.textBoxImageSize.Size = new System.Drawing.Size(43, 20);
             this.textBoxImageSize.TabIndex = 15;
@@ -287,7 +290,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(523, 174);
+            this.label4.Location = new System.Drawing.Point(538, 307);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 16;
@@ -317,10 +320,7 @@
             this.panel1.Controls.Add(this.textBoxSVG);
             this.panel1.Controls.Add(this.textBoxTagret);
             this.panel1.Controls.Add(this.progressBar1);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBoxImageSize);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button5);
@@ -350,8 +350,11 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBoxImageSize);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
