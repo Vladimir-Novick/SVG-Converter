@@ -55,7 +55,7 @@ namespace SVG_Converter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (var ofd = new OpenFileDialog {Filter = "Scalable Vector Graphics File (*.svg)|*.svg", Multiselect = true})
+            using (var ofd = new OpenFileDialog { Filter = "Scalable Vector Graphics File (*.svg)|*.svg", Multiselect = true })
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                     for (int i = 0; i <= ofd.FileNames.Length - 1; i++)
@@ -64,11 +64,11 @@ namespace SVG_Converter
                         using (Bitmap B = SvgDocument.Open(ofd.FileNames[i]).Draw())
                         {
                             // adding the current image to imagelist.
-                            AddImageToImageList(imageList1,Path.GetFileName(ofd.FileNames[i]), B);
+                            AddImageToImageList(imageList1, Path.GetFileName(ofd.FileNames[i]), B);
                             // getting the svg filename.
                             string filename = Path.GetFileName(ofd.FileNames[i]);
                             // adding the current image to listview.
-                            AddItemToListView(listView1, filename, new string[] { ofd.FileNames[i]}, imageList1);
+                            AddItemToListView(listView1, filename, new string[] { ofd.FileNames[i] }, imageList1);
                         }
                     }
             }
@@ -93,7 +93,7 @@ namespace SVG_Converter
                 // here we show the number of svg files converted.
                 MessageBox.Show(string.Format("{0} SVG Items Successfully Converted To PNG !", listView1.Items.Count) + Environment.NewLine + string.Format("Destination : {0}", FBD.SelectedPath));
             }
-            
+
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace SVG_Converter
                     return ImageFormat.Icon;
                 default:
                     return ImageFormat.Png;
-                    
+
             }
         }
 
@@ -188,7 +188,7 @@ namespace SVG_Converter
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
                 textBoxSVG.Text = dialog.FileName;
-               
+
             }
         }
 
@@ -227,7 +227,23 @@ namespace SVG_Converter
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            textBoxLOG.Text =  "..... Complete .....";
+            if (e.Cancelled == true)
+            {
+                 textBoxLOG.Text = "***** Canceled! *****";
+            }
+            else if (e.Error != null)
+            {
+              
+                textBoxLOG.Text = "..... Error: " + e.Error.Message;
+            }
+            else
+            {
+                textBoxLOG.Text = "..... Complete .....";
+            }
+
+
+           
+            BtnPackageConvert.Enabled = true;
             progressBar1.Value = 0;
         }
 
@@ -237,19 +253,21 @@ namespace SVG_Converter
             string fileName = (string)e.UserState;
 
             textBoxLOG.Text = fileName;
-            progressBar1.Value = e.ProgressPercentage +5;
+            progressBar1.Value = e.ProgressPercentage ;
+
         }
 
+        private bool backgroundWorker1_cansel = false;
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             argorker_type arg = (argorker_type)e.Argument;
             BackgroundWorker helperBW = sender as BackgroundWorker;
-            string sourceFolder =  arg.sourceFolder;
+            string sourceFolder = arg.sourceFolder;
             string targrtFolder = arg.targrtFolder;
             float Width = arg.withSize;
             DirectoryInfo d = new DirectoryInfo(sourceFolder);
-            { 
+            {
 
                 FileInfo[] Files = d.GetFiles("*.svg"); //Getting Text files
 
@@ -260,7 +278,8 @@ namespace SVG_Converter
                 {
                     string file = file_.FullName;
                     var fileName = Path.GetFileName(file);
-                    int percent = (i / filesSize) * 100;
+                    int percent = Convert.ToInt32(((float)i / (float)filesSize) * 100);
+                    i++;
 
                     helperBW.ReportProgress(percent, fileName);
                     {
@@ -269,7 +288,7 @@ namespace SVG_Converter
                         if (backgroundWorker1.CancellationPending)
                         {
                             e.Cancel = true;
-                            backgroundWorker1.ReportProgress(0,"..... Canceled .....");
+               
                             return;
                         }
 
@@ -293,22 +312,15 @@ namespace SVG_Converter
                                     int HeightImage = Convert.ToInt32(imageHeight * ratio);
                                     doc.Width = WidthImage;
                                     doc.Height = HeightImage;
-                                    using (Bitmap B = doc.Draw())
-                                    {
-
-                                        B.Save(targrtFolder + "/" + fileName.Replace(".svg", "." + arg.imageType), ImgFormat(arg.imageType));
-
-                                    }
                                 }
-                                else
+
+                                using (Bitmap B = doc.Draw())
                                 {
-                                    using (Bitmap B = doc.Draw())
-                                    {
 
-                                        B.Save(targrtFolder + "/" + fileName.Replace(".svg", "." + arg.imageType), ImgFormat(arg.imageType));
+                                    B.Save(targrtFolder + "/" + fileName.Replace(".svg", "." + arg.imageType), ImgFormat(arg.imageType));
 
-                                    }
                                 }
+
                             }
                         }
                         catch (Exception)
@@ -330,10 +342,10 @@ namespace SVG_Converter
             argorker_type arg;
 
 
-            DialogResult dialogResult = MessageBox.Show( sourceFolder + "  \n to \n" + targrtFolder, "Are You Sure convert ?", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show(sourceFolder + "  \n to \n" + targrtFolder, "Are You Sure convert ?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                 progressBar1.Maximum = 100;
+                progressBar1.Maximum = 100;
                 progressBar1.Step = 1;
                 progressBar1.Value = 0;
                 arg.sourceFolder = textBoxSVG.Text;
@@ -346,11 +358,15 @@ namespace SVG_Converter
                 arg.withSize = intSize;
 
                 if (!backgroundWorker1.IsBusy)
+                {
                     backgroundWorker1.RunWorkerAsync(arg);
+                    BtnPackageConvert.Enabled = false;
+                    backgroundWorker1_cansel = false;
+                }
             }
             else if (dialogResult == DialogResult.No)
             {
-                
+
             }
         }
 

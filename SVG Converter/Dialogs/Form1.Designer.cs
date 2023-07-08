@@ -57,7 +57,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
@@ -71,7 +74,7 @@
             this.listView1.LargeImageList = this.imageList1;
             this.listView1.Location = new System.Drawing.Point(3, 38);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(561, 261);
+            this.listView1.Size = new System.Drawing.Size(580, 248);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -127,12 +130,11 @@
             // 
             this.button3.Image = global::SVG_Converter.Properties.Resources.Gnome_Emblem_Unreadable_32;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(101, 315);
+            this.button3.Location = new System.Drawing.Point(166, 297);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 29);
+            this.button3.Size = new System.Drawing.Size(131, 29);
             this.button3.TabIndex = 3;
             this.button3.Text = "Clear";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -140,12 +142,11 @@
             // 
             this.button2.Image = global::SVG_Converter.Properties.Resources.Gnome_View_Sort_Descending_32;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(190, 315);
+            this.button2.Location = new System.Drawing.Point(452, 296);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.Size = new System.Drawing.Size(131, 29);
             this.button2.TabIndex = 1;
             this.button2.Text = "Convert";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -153,12 +154,11 @@
             // 
             this.button1.Image = global::SVG_Converter.Properties.Resources.Gnome_List_Add_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1, 315);
+            this.button1.Location = new System.Drawing.Point(21, 297);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(131, 29);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add Files";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -174,32 +174,32 @@
             "Jpeg",
             "Png",
             "Tiff"});
-            this.comboBox1.Location = new System.Drawing.Point(293, 317);
+            this.comboBox1.Location = new System.Drawing.Point(309, 298);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(99, 26);
+            this.comboBox1.Size = new System.Drawing.Size(131, 26);
             this.comboBox1.TabIndex = 4;
             // 
             // textBoxSVG
             // 
-            this.textBoxSVG.Location = new System.Drawing.Point(77, 445);
+            this.textBoxSVG.Location = new System.Drawing.Point(91, 95);
             this.textBoxSVG.Name = "textBoxSVG";
             this.textBoxSVG.ReadOnly = true;
-            this.textBoxSVG.Size = new System.Drawing.Size(429, 20);
+            this.textBoxSVG.Size = new System.Drawing.Size(417, 20);
             this.textBoxSVG.TabIndex = 5;
             // 
             // textBoxTagret
             // 
-            this.textBoxTagret.Location = new System.Drawing.Point(77, 477);
+            this.textBoxTagret.Location = new System.Drawing.Point(91, 127);
             this.textBoxTagret.Name = "textBoxTagret";
             this.textBoxTagret.ReadOnly = true;
-            this.textBoxTagret.Size = new System.Drawing.Size(429, 20);
+            this.textBoxTagret.Size = new System.Drawing.Size(417, 20);
             this.textBoxTagret.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(13, 448);
+            this.label1.Location = new System.Drawing.Point(15, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 7;
@@ -208,15 +208,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 480);
+            this.label2.Location = new System.Drawing.Point(15, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Target";
+            this.label2.Text = "Target Folder";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(513, 445);
+            this.button4.Location = new System.Drawing.Point(515, 95);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(43, 23);
             this.button4.TabIndex = 9;
@@ -226,7 +226,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(512, 474);
+            this.button5.Location = new System.Drawing.Point(514, 124);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(43, 23);
             this.button5.TabIndex = 10;
@@ -238,7 +238,7 @@
             // 
             this.BtnPackageConvert.Image = global::SVG_Converter.Properties.Resources.Gnome_View_Sort_Descending_32;
             this.BtnPackageConvert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPackageConvert.Location = new System.Drawing.Point(172, 510);
+            this.BtnPackageConvert.Location = new System.Drawing.Point(163, 163);
             this.BtnPackageConvert.Name = "BtnPackageConvert";
             this.BtnPackageConvert.Size = new System.Drawing.Size(130, 30);
             this.BtnPackageConvert.TabIndex = 11;
@@ -248,7 +248,7 @@
             // 
             // textBoxLOG
             // 
-            this.textBoxLOG.Location = new System.Drawing.Point(16, 401);
+            this.textBoxLOG.Location = new System.Drawing.Point(18, 51);
             this.textBoxLOG.Name = "textBoxLOG";
             this.textBoxLOG.ReadOnly = true;
             this.textBoxLOG.Size = new System.Drawing.Size(539, 20);
@@ -258,9 +258,9 @@
             // 
             this.buttonStop.Image = global::SVG_Converter.Properties.Resources.Gnome_Emblem_Unreadable_32;
             this.buttonStop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStop.Location = new System.Drawing.Point(308, 510);
+            this.buttonStop.Location = new System.Drawing.Point(299, 163);
             this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(130, 30);
+            this.buttonStop.Size = new System.Drawing.Size(122, 30);
             this.buttonStop.TabIndex = 13;
             this.buttonStop.Text = "Stop";
             this.buttonStop.UseVisualStyleBackColor = true;
@@ -269,15 +269,15 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(398, 322);
+            this.label3.Location = new System.Drawing.Point(436, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Image width";
+            this.label3.Text = "width";
             // 
             // textBoxImageSize
             // 
-            this.textBoxImageSize.Location = new System.Drawing.Point(468, 318);
+            this.textBoxImageSize.Location = new System.Drawing.Point(474, 170);
             this.textBoxImageSize.Name = "textBoxImageSize";
             this.textBoxImageSize.Size = new System.Drawing.Size(43, 20);
             this.textBoxImageSize.TabIndex = 15;
@@ -287,7 +287,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(517, 322);
+            this.label4.Location = new System.Drawing.Point(523, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 16;
@@ -295,7 +295,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(16, 367);
+            this.progressBar1.Location = new System.Drawing.Point(18, 17);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(540, 20);
             this.progressBar1.TabIndex = 17;
@@ -310,25 +310,46 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Preview window";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.BtnPackageConvert);
+            this.panel1.Controls.Add(this.textBoxSVG);
+            this.panel1.Controls.Add(this.textBoxTagret);
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBoxImageSize);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.buttonStop);
+            this.panel1.Controls.Add(this.textBoxLOG);
+            this.panel1.Location = new System.Drawing.Point(3, 370);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(580, 208);
+            this.panel1.TabIndex = 19;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(222, 338);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(132, 18);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Folder converter";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 552);
+            this.ClientSize = new System.Drawing.Size(589, 587);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxImageSize);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.buttonStop);
-            this.Controls.Add(this.textBoxLOG);
-            this.Controls.Add(this.BtnPackageConvert);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxTagret);
-            this.Controls.Add(this.textBoxSVG);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.listView1);
@@ -339,6 +360,8 @@
             this.Name = "Form1";
             this.Text = "SVG Converter";
             this.contextMenuStrip1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,6 +396,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
     }
 }
 
