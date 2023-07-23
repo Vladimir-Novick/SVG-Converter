@@ -2,7 +2,7 @@
 Converter from SVG image format to PNG/ICO/BMP/GIF/JPEG/TIFF image format
 
 
-![SVG-Converter ](https://https://github.com/Vladimir-Novick/SVG-Converter/blob/main/img/SVG_Converter.png?raw=true)
+![SVG-Converter ](https://github.com/Vladimir-Novick/SVG-Converter/blob/main/img/SVG_Converter.png?raw=true)
 
 ## License
 
